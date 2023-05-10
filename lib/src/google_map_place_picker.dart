@@ -181,8 +181,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
                       _buildPin(),
                     ],
                   ))),
-        if (!this.fullMotion) _buildGoogleMap(context),
-        if (!this.fullMotion) _buildPin(),
+        if (!this.fullMotion) ...[_buildGoogleMap(context), _buildPin()],
         _buildFloatingCard(),
         _buildMapIcons(context),
         _buildZoomButtons()
