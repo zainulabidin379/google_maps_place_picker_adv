@@ -42,7 +42,7 @@ class PlaceProvider extends ChangeNotifier {
   LocationAccuracy? desiredAccuracy;
   bool isAutoCompleteSearching = false;
 
-  Future<void> updateCurrentLocation(bool forceAndroidLocationManager) async {
+  Future<void> updateCurrentLocation() async {
     bool serviceEnabled;
     LocationPermission permission;
 
@@ -74,7 +74,9 @@ class PlaceProvider extends ChangeNotifier {
           'Location permissions are permanently denied, we cannot request permissions.');
     }
 
-    notifyListeners();
+    _currentPosition = await Geolocator.getCurrentPosition(
+      desiredAccuracy: desiredAccuracy ?? LocationAccuracy.best,
+    );
   }
 
   Position? _currentPosition;
