@@ -1,3 +1,5 @@
+## [3.1.2] - 13/Sep/2023
+
 - Fix potential crash on hesitant camera movements #67
 - Replace obsolete dependencies to support the major release of `http`
 
