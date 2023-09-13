@@ -5,8 +5,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_place_picker_mb/src/models/pick_result.dart';
 import 'package:google_maps_place_picker_mb/src/place_picker.dart';
-import 'package:google_maps_webservice/geocoding.dart';
-import 'package:google_maps_webservice/places.dart';
+import 'package:flutter_google_maps_webservices/geocoding.dart';
+import 'package:flutter_google_maps_webservices/places.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +23,6 @@ class PlaceProvider extends ChangeNotifier {
       httpClient: httpClient,
       apiHeaders: apiHeaders as Map<String, String>?,
     );
-
     geocoding = GoogleMapsGeocoding(
       apiKey: apiKey,
       baseUrl: proxyBaseUrl,
@@ -162,7 +161,6 @@ class PlaceProvider extends ChangeNotifier {
   switchMapType() {
     _mapType = MapType.values[(_mapType.index + 1) % MapType.values.length];
     if (_mapType == MapType.none) _mapType = MapType.normal;
-
     notifyListeners();
   }
 }
