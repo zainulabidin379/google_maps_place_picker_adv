@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:google_maps_place_picker_mb/google_maps_place_picker.dart';
-import 'package:google_maps_place_picker_mb/providers/place_provider.dart';
-import 'package:google_maps_place_picker_mb/providers/search_provider.dart';
-import 'package:google_maps_place_picker_mb/src/components/prediction_tile.dart';
-import 'package:google_maps_place_picker_mb/src/controllers/autocomplete_search_controller.dart';
 import 'package:flutter_google_maps_webservices/places.dart';
+import 'package:google_maps_place_picker_adv/google_maps_place_picker.dart';
+import 'package:google_maps_place_picker_adv/providers/place_provider.dart';
+import 'package:google_maps_place_picker_adv/providers/search_provider.dart';
+import 'package:google_maps_place_picker_adv/src/components/prediction_tile.dart';
+import 'package:google_maps_place_picker_adv/src/controllers/autocomplete_search_controller.dart';
 import 'package:provider/provider.dart';
 
 class AutoCompleteSearch extends StatefulWidget {
